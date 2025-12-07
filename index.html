@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>История языков программирования</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%233b82f6%22>💻</text></svg>">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#home" class="logo">
+                    <i class="fas fa-code"></i>
+                    <span>CodeHistory</span>
+                </a>
+                
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="#timeline" class="nav-link"><i class="fas fa-history"></i> Хронология</a></li>
+                    <li><a href="#languages" class="nav-link"><i class="fas fa-language"></i> Языки</a></li>
+                    <li><a href="#comparison" class="nav-link"><i class="fas fa-balance-scale"></i> Сравнение</a></li>
+                    <li><a href="#resources" class="nav-link"><i class="fas fa-book"></i> Ресурсы</a></li>
+                </ul>
+                
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="gradient-text">История</span> языков программирования
+                </h1>
+                <p class="hero-subtitle">От машинных кодов до современных фреймворков: эволюция языков программирования за 80 лет</p>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number" data-target="250">0</div>
+                        <div class="stat-label">языков программирования</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number" data-target="80">0</div>
+                        <div class="stat-label">лет истории</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number" data-target="5">0</div>
+                        <div class="stat-label">поколений</div>
+                    </div>
+                </div>
+                
+                <a href="#timeline" class="btn btn-primary">
+                    <i class="fas fa-play-circle"></i> Начать путешествие
+                </a>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="code-animation">
+                    <div class="code-line"><span class="keyword">function</span> <span class="function">helloWorld</span>() {</div>
+                    <div class="code-line">&nbsp;&nbsp;<span class="console">console</span>.<span class="function">log</span>(<span class="string">"Hello, History!"</span>);</div>
+                    <div class="code-line">}</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Хронология развития</h2>
+                <p>Ключевые моменты в истории языков программирования</p>
+            </div>
+            
+            <div class="timeline-controls">
+                <button class="filter-btn active" data-era="all">Все эпохи</button>
+                <button class="filter-btn" data-era="early">Ранние (1940-1950)</button>
+                <button class="filter-btn" data-era="middle">Классические (1960-1980)</button>
+                <button class="filter-btn" data-era="modern">Современные (1990-н.в.)</button>
+            </div>
+            
+            <div class="timeline" id="timelineContainer">
+                <!-- Timeline items will be generated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages Grid -->
+    <section id="languages" class="section bg-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2>Основные языки программирования</h2>
+                <p>Самые влиятельные языки в истории компьютерных наук</p>
+            </div>
+            
+            <div class="languages-grid" id="languagesGrid">
+                <!-- Languages will be generated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section id="comparison" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Сравнение языков</h2>
+                <p>Технические характеристики и особенности</p>
+            </div>
+            
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Язык</th>
+                            <th>Год</th>
+                            <th>Тип</th>
+                            <th>Парадигма</th>
+                            <th>Сложность</th>
+                            <th>Применение</th>
+                        </tr>
+                    </thead>
+                    <tbody id="comparisonTable">
+                        <!-- Table rows will be generated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Generations Info -->
+    <section class="section bg-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2>Поколения языков</h2>
+                <p>Эволюция от машинного кода к языкам высокого уровня</p>
+            </div>
+            
+            <div class="generations">
+                <div class="generation-card">
+                    <div class="generation-number">1GL</div>
+                    <h3>Машинный код</h3>
+                    <p>1940-е годы. Программирование на уровне процессорных инструкций (бинарный код).</p>
+                    <div class="generation-example">
+                        <code>10110000 01100001</code>
+                    </div>
+                </div>
+                
+                <div class="generation-card">
+                    <div class="generation-number">2GL</div>
+                    <h3>Ассемблер</h3>
+                    <p>1950-е годы. Мнемонические обозначения машинных инструкций.</p>
+                    <div class="generation-example">
+                        <code>MOV AL, 61h</code>
+                    </div>
+                </div>
+                
+                <div class="generation-card">
+                    <div class="generation-number">3GL</div>
+                    <h3>Языки высокого уровня</h3>
+                    <p>1957-н.в. Фортран, C, Java, Python. Абстракция от аппаратного обеспечения.</p>
+                    <div class="generation-example">
+                        <code>print("Hello, World!")</code>
+                    </div>
+                </div>
+                
+                <div class="generation-card">
+                    <div class="generation-number">4GL</div>
+                    <h3>Декларативные языки</h3>
+                    <p>1970-е-н.в. SQL, MATLAB. Описание того, что нужно сделать, а не как.</p>
+                    <div class="generation-example">
+                        <code>SELECT * FROM users</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources -->
+    <section id="resources" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Ресурсы для изучения</h2>
+                <p>Материалы для углубленного изучения истории языков</p>
+            </div>
+            
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3>Хронология в PDF</h3>
+                    <p>Полная хронология развития языков программирования</p>
+                    <button class="btn btn-outline" onclick="downloadResource('timeline')">
+                        <i class="fas fa-download"></i> Скачать
+                    </button>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Примеры кода</h3>
+                    <p>"Hello, World!" на 20 разных языках программирования</p>
+                    <button class="btn btn-outline" onclick="downloadResource('examples')">
+                        <i class="fas fa-download"></i> Скачать
+                    </button>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Библиография</h3>
+                    <p>Книги и статьи по истории языков программирования</p>
+                    <button class="btn btn-outline" onclick="downloadResource('books')">
+                        <i class="fas fa-download"></i> Скачать
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CodeHistory</h3>
+                    <p>Изучаем историю языков программирования от истоков до наших дней.</p>
+                    <div class="social-links">
+                        <a href="https://github.com" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Разделы</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Главная</a></li>
+                        <li><a href="#timeline"><i class="fas fa-chevron-right"></i> Хронология</a></li>
+                        <li><a href="#languages"><i class="fas fa-chevron-right"></i> Языки</a></li>
+                        <li><a href="#comparison"><i class="fas fa-chevron-right"></i> Сравнение</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Ресурсы</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://en.wikipedia.org/wiki/History_of_programming_languages" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Wikipedia
+                        </a></li>
+                        <li><a href="https://github.com" target="_blank">
+                            <i class="fab fa-github"></i> GitHub репозиторий
+                        </a></li>
+                        <li><a href="#" onclick="downloadResource('all')">
+                            <i class="fas fa-download"></i> Все материалы
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 CodeHistory. Проект создан для размещения на GitHub Pages.</p>
+                <p>Исторические данные собраны из открытых источников.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="timeline-data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
